@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Moalosi Platinum Finance</string>
+    <string name="new_transaction">Tsamaiso e Ntjha yaTjhelete</string>
+    <string name="hint_title">Sehlooho (mohlala, Korosari)</string>
+    <string name="hint_amount">Tjhelete (mohlala, 150.50)</string>
+    <string name="btn_save_offline">Boloka Kantle ho Inthanete</string>
+    <string name="btn_open_settings">Di-setting le Puo</string>
+    <string name="offline_history">Nalane ya Polokelo ya Offline</string>
+    <string name="no_transactions">Ha ho tsamaiso e ngodisitsweng.</string>
+
+    <!-- Settings Screen Strings -->
+    <string name="settings_title">Di-setting tsa Mosebedisi</string>
+    <string name="select_language">Kgetha Puo (Afrika Borwa)</string>
+    <string name="enable_notifications">Dumella Ditsebiso tsa Nako ya Nnete</string>
+    <string name="enable_dark_mode">Mokgwa o Motsho (Dark Mode)</string>
+    <string name="save_settings">Boloka Di-setting</string>
+    <string name="settings_saved">Di-setting di bolokilwe ka katleho!</string>
+</resources>

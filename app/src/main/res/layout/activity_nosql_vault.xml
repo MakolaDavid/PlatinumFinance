@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" android:padding="24dp" tools:ignore="HardcodedText" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:layout_width="match_parent" android:text="NoSQL &amp; Blob Storage Vault" android:textSize="22sp" android:textStyle="bold"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:layout_width="match_parent" android:text="Attach a receipt image (Blob) and store/read unstructured JSON documents (NoSQL)." android:textSize="14sp"/>
+
+    <EditText android:hint="Document Category (e.g., Tax Receipt, Loan Doc)" android:id="@+id/etDocCategory" android:inputType="text" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:layout_width="match_parent" android:minHeight="48dp"/>
+
+    <EditText android:hint="Dynamic Metadata / Notes" android:id="@+id/etDocNotes" android:inputType="text" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:layout_width="match_parent" android:minHeight="48dp"/>
+
+    <!-- Preview of the selected Blob image -->
+    <ImageView android:background="#E0E0E0" android:contentDescription="Blob Receipt Preview" android:id="@+id/ivBlobPreview" android:layout_gravity="center" android:layout_height="100dp" android:layout_marginBottom="8dp" android:layout_width="100dp" android:scaleType="centerCrop"/>
+
+    <TextView android:id="@+id/tvBlobStatus" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:layout_width="match_parent" android:text="Blob Status: No binary file selected" android:textAlignment="center" android:textSize="12sp"/>
+
+    <Button android:id="@+id/btnSelectBlob" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:layout_width="match_parent" android:minHeight="48dp" android:text="1. Upload Receipt Image (Blob Storage)"/>
+
+    <Button android:id="@+id/btnSaveNoSql" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:layout_width="match_parent" android:minHeight="48dp" android:text="2. Store Document in NoSQL DB"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:layout_width="match_parent" android:text="NoSQL Collection Documents (Read Output):" android:textSize="16sp" android:textStyle="bold"/>
+
+    <ScrollView android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+
+        <TextView android:fontFamily="monospace" android:id="@+id/tvNoSqlOutput" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="No documents in NoSQL collection yet." android:textSize="13sp"/>
+    </ScrollView>
+
+</LinearLayout>

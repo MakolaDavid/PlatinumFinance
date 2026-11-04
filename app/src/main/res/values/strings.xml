@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Moalosi Platinum Finance</string>
+    <string name="new_transaction">New Transaction</string>
+    <string name="hint_title">Title (e.g., Groceries)</string>
+    <string name="hint_amount">Amount (e.g., 150.50)</string>
+    <string name="btn_save_offline">Save Offline</string>
+    <string name="btn_open_settings">App Settings &amp; Language</string>
+    <string name="offline_history">Offline Database History</string>
+    <string name="no_transactions">No offline transactions recorded.</string>
+
+    <!-- Settings Screen Strings -->
+    <string name="settings_title">User Settings</string>
+    <string name="select_language">Select Language (South Africa)</string>
+    <string name="enable_notifications">Enable Real-Time Push Alerts</string>
+    <string name="enable_dark_mode">Dark Mode Theme</string>
+    <string name="save_settings">Apply &amp; Save Settings</string>
+    <string name="settings_saved">Settings updated successfully!</string>
+    <string name="english_south_africa">English (UK)</string>
+    <string name="sesotho_afrika_borwa">Sesotho ( Afrika Borwa )</string>
+</resources>
