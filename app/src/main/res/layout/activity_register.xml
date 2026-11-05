@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:background="#E4E4E7"
     tools:ignore="HardcodedText">
 
     <LinearLayout
@@ -11,108 +11,220 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Platinum Finance"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_marginBottom="8dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register a new account or log in below"
-            android:textSize="14sp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp" />
-
-        <EditText
-            android:id="@+id/etSaId"
+        <!-- Onyx Black Hero Header with Official Platinum Finance Logo -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:hint="SA ID Number (For Registration)"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:textColorHint="#546E7A"
-            tools:ignore="VisualLintTextFieldSize" />
+            android:background="#141414"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp">
 
-        <EditText
-            android:id="@+id/etFirstName"
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="Platinum Finance Logo"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.12"
+                android:text="PLATINUM FINANCE"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:letterSpacing="0.25"
+                android:text="ESTD 2008"
+                android:textColor="#D4D4D8"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                android:background="#71717A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NCA Registered Micro-Lender • Offline-Ready Vault"
+                android:textColor="#A1A1AA"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Main Authentication Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:hint="First Name (For Registration)"
-            android:importantForAutofill="no"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="#546E7A"
-            tools:ignore="VisualLintTextFieldSize" />
+            android:layout_margin="16dp"
+            android:background="#FFFFFF"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <EditText
-            android:id="@+id/etLastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:hint="Last Name (For Registration)"
-            android:importantForAutofill="no"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="#546E7A"
-            tools:ignore="VisualLintTextFieldSize" />
+            <!-- Tab Switcher: Onyx Black vs Brushed Platinum -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:hint="Email Address (Required for Register &amp; Login)"
-            android:importantForAutofill="no"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp"
-            android:textColorHint="#546E7A"
-            tools:ignore="VisualLintTextFieldSize" />
+                <Button
+                    android:id="@+id/btnTabRegister"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#141414"
+                    android:text="1. Create Account"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:hint="Password (Required for Register &amp; Login)"
-            android:importantForAutofill="no"
-            android:inputType="textPassword"
-            android:minHeight="48dp"
-            android:textColorHint="#546E7A"
-            tools:ignore="VisualLintTextFieldSize" />
+                <Button
+                    android:id="@+id/btnTabLogin"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#D4D4D8"
+                    android:text="2. Member Login"
+                    android:textColor="#141414"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="Register Account"
-            android:layout_marginBottom="12dp"
-            tools:ignore="VisualLintButtonSize" />
+            <TextView
+                android:id="@+id/tvAuthSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="3-Step Onboarding: Confirm SA ID → Verify → Apply (Zero Onboarding Fees)"
+                android:textColor="#52525B"
+                android:textSize="13sp"
+                android:textStyle="italic" />
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="Existing User? Log In"
-            android:layout_marginBottom="12dp"
-            tools:ignore="VisualLintButtonSize" />
+            <!-- Registration Fields -->
+            <LinearLayout
+                android:id="@+id/layoutRegisterFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnSsoLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="Sign In with Google (SSO)"
-            tools:ignore="VisualLintButtonSize" />
+                <EditText
+                    android:id="@+id/etSaId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="13-Digit South African ID Number"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:minHeight="48dp"
+                    android:textColor="#141414" />
 
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="First Name"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textColor="#141414" />
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Surname / Last Name"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textColor="#141414" />
+
+                <EditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Mobile Number (e.g., 082 123 4567)"
+                    android:inputType="phone"
+                    android:minHeight="48dp"
+                    android:textColor="#141414" />
+            </LinearLayout>
+
+            <!-- Email & Password -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textColor="#141414" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Password (Encrypted via SHA-256)"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColor="#141414" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#141414"
+                android:minHeight="52dp"
+                android:text="Complete Registration (Activate Tier)"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#27272A"
+                android:minHeight="52dp"
+                android:text="Log In to Platinum Dashboard"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="— OR SINGLE SIGN-ON (OAUTH 2.0) —"
+                android:textColor="#71717A"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSsoLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#D4D4D8"
+                android:minHeight="48dp"
+                android:text="Sign In with Google Identity (SSO)"
+                android:textColor="#141414"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

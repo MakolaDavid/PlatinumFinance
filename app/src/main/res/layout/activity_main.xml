@@ -1,92 +1,387 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
+    android:background="#E4E4E7"
     tools:ignore="HardcodedText">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/new_transaction"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/etTransactionTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:hint="@string/hint_title"
-        android:inputType="text"
-        android:layout_marginBottom="8dp"/>
-
-    <EditText
-        android:id="@+id/etTransactionAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:hint="@string/hint_amount"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- Button 1: Save Transaction Offline to RoomDB -->
-    <Button
-        android:id="@+id/btnSaveTransaction"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="@string/btn_save_offline"
-        android:layout_marginBottom="8dp"/>
-
-    <!-- Button 2: Open User Settings & South African Language Switcher -->
-    <Button
-        android:id="@+id/btnOpenSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="@string/btn_open_settings"
-        android:layout_marginBottom="8dp"/>
-
-    <!-- Button 3: Synchronize Offline RoomDB Records When Reconnected -->
-    <Button
-        android:id="@+id/btnSyncData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="Sync Offline Data to Cloud"
-        android:layout_marginBottom="8dp"/>
-
-    <!-- Button 4: Open NoSQL Database & Blob Storage Vault -->
-    <Button
-        android:id="@+id/btnOpenVault"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="Open NoSQL &amp; Blob Receipt Vault"
-        android:layout_marginBottom="24dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/offline_history"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/tvTransactionHistory"
+        <!-- 1. ONYX & PLATINUM HERO DASHBOARD CARD (With App Logo) -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/no_transactions"
-            android:textSize="16sp"/>
-    </ScrollView>
-</LinearLayout>
+            android:layout_marginBottom="16dp"
+            android:background="#141414"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Platinum Finance Emblem"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="PLATINUM FINANCE • ESTD 2008"
+                        android:textColor="#A1A1AA"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvWelcomeUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome, Member"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCreditTierBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#D4D4D8"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="CREDIT TIER: BRONZE (100 PTS)"
+                android:textColor="#141414"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/pbTierProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:max="300"
+                android:progress="100"
+                android:progressTint="#D4D4D8" />
+
+            <TextView
+                android:id="@+id/tvTierPerks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Tier Limit: R 4,000 | Interest Rate: 20% | Repay loans on time to unlock SILVER (16%) &amp; PLATINUM (12%)!"
+                android:textColor="#A1A1AA"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- 2. DIGITAL AFFORDABILITY VERIFICATION CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instant Digital Affordability Check"
+                android:textColor="#141414"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Automated paperless affordability assessment (Inspired by TymeBank)."
+                android:textColor="#52525B"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etMonthlyIncome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:hint="Monthly Income (R)"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:textColor="#141414"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etMonthlyExpenses"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:hint="Monthly Expenses (R)"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:textColor="#141414"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnVerifyAffordability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="#27272A"
+                android:minHeight="48dp"
+                android:text="Verify My Affordability Standing"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAffordabilityResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Status: Enter income &amp; expenses for instant digital verification."
+                android:textColor="#3F3F46"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 3. DYNAMIC NCA PRE-AGREEMENT CALCULATOR CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_transaction"
+                android:textColor="#141414"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Dynamic NCA Pre-Agreement Calculator (R 500 – R 4,000)"
+                android:textColor="#52525B"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etTransactionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/hint_title"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:text="Personal Micro-Loan"
+                android:textColor="#141414" />
+
+            <TextView
+                android:id="@+id/tvSliderAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Loan Principal: R 2,000.00"
+                android:textColor="#141414"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMinusAmount"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#27272A"
+                    android:text="-"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:id="@+id/seekBarLoanAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="3500"
+                    android:progress="1500"
+                    android:progressTint="#141414"
+                    android:thumbTint="#141414" />
+
+                <Button
+                    android:id="@+id/btnPlusAmount"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#141414"
+                    android:text="+"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSliderDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Repayment Term: 30 Days"
+                android:textColor="#3F3F46"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/seekBarLoanDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:max="53"
+                android:progress="23"
+                android:progressTint="#3F3F46"
+                android:thumbTint="#141414" />
+
+            <EditText
+                android:id="@+id/etTransactionAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/hint_amount"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:text="2000.0"
+                android:textColor="#141414" />
+
+            <!-- Onyx & Platinum Quote Box -->
+            <TextView
+                android:id="@+id/tvBreakdownDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:background="#141414"
+                android:fontFamily="monospace"
+                android:padding="14dp"
+                android:text="NCA PRE-AGREEMENT QUOTE:\n• Principal Amount:   R 2000.00\n• Initiation Fee:     R 165.00\n• Monthly Service:    R 60.00\n• VAT (15% on Fees):  R 33.75\n• Interest (20%):     R 400.00\n• Onboarding Fee:     R 0.00 (Free)\n===============================\nTOTAL REPAYMENT:      R 2625.00"
+                android:textColor="#F4F4F5"
+                android:textSize="12sp" />
+
+            <!-- Monochrome Onyx & Platinum Action Buttons -->
+            <Button
+                android:id="@+id/btnSaveTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#141414"
+                android:minHeight="50dp"
+                android:text="@string/btn_save_offline"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnPayLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#D4D4D8"
+                android:minHeight="48dp"
+                android:text="Pay / Settle Active Loan (+100 Tier Pts)"
+                android:textColor="#141414"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSyncData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#27272A"
+                android:minHeight="48dp"
+                android:text="Sync Offline Loans to Cloud API"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnOpenVault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#3F3F46"
+                android:minHeight="48dp"
+                android:text="Open NoSQL &amp; Blob Receipt Vault"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnOpenSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#52525B"
+                android:minHeight="48dp"
+                android:text="@string/btn_open_settings"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- 4. OFFLINE ROOMDB & REPAYMENT HISTORY CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/offline_history"
+                android:textColor="#141414"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTransactionHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_transactions"
+                android:textColor="#27272A"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

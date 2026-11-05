@@ -6,9 +6,6 @@
 
 ---
 
-## 1. Demonstration Video & Publication Evidence
-* **YouTube Demonstration Video (With Voice-Over):** [PASTE YOUR UNLISTED YOUTUBE LINK HERE]
-* **Target Deployment:** Physical Android Mobile Device (Signed Release APK)
 
 ---
 
