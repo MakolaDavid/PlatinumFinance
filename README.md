@@ -5,6 +5,19 @@
 **Module:** Open Source Coding (Final PoE)
 
 ---
+## 1. Screenshots
+
+<img width="959" height="536" alt="assg6" src="https://github.com/user-attachments/assets/88ec91ad-6a9e-4308-be3f-942711b0d490" />
+<img width="959" height="537" alt="assg5" src="https://github.com/user-attachments/assets/2ddb6e2e-b655-4b9e-ae21-c591300dc2c4" />
+<img width="959" height="501" alt="assg4" src="https://github.com/user-attachments/assets/83e44d28-f22a-412f-b862-c582722d2959" />
+<img width="959" height="539" alt="assg3" src="https://github.com/user-attachments/assets/958f4a9b-cba1-4197-8960-4a03c8b07c7d" />
+<img width="959" height="502" alt="assg2" src="https://github.com/user-attachments/assets/e608cc92-1c16-42f1-985c-d16194a3de40" />
+<img width="959" height="503" alt="ASSg1" src="https://github.com/user-attachments/assets/017aad39-76cb-4673-be5f-de60a8f0b7d3" />
+<img width="1080" height="2400" alt="Screenshot_20261105_115944_Moalosi Platinum Finance" src="https://github.com/user-attachments/assets/5eb59144-3f98-4b45-aabe-8eaf21609e1e" />
+<img width="1080" height="2400" alt="Screenshot_20261105_115940_Moalosi Platinum Finance" src="https://github.com/user-attachments/assets/233ffc2f-f16e-476e-b4e0-5cc284064643" />
+<img width="1080" height="2400" alt="Screenshot_20261105_115923_Moalosi Platinum Finance" src="https://github.com/user-attachments/assets/4cf6b021-ec72-4340-827f-a0947781e92e" />
+<img width="1080" height="2400" alt="Screenshot_20261105_115917_Moalosi Platinum Finance" src="https://github.com/user-attachments/assets/05f7242d-23ed-4bad-8425-95c322dd960e" />
+<img width="1080" height="2400" alt="Screenshot_20261105_120007_Moalosi Platinum Finance" src="https://github.com/user-attachments/assets/e0061631-ddab-4a95-bd8d-dc1169f6eee4" />
 
 
 ---
